@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Todo List</title>
+		<style>
+			body {
+				background-color: antiquewhite;
+			}
+
+			.todoListArea {
+				margin: 0 auto;
+				text-align: center;
+				border: 1px solid lightgray;
+				border-radius: 3px;
+				width: 400px;
+				padding: 15px;
+			}
+
+			.todoListArea h2 {
+				margin-top: 0;
+			}
+
+			form.todoForm {}
+
+			form.todoForm .formGroup {
+				display: flex;
+				justify-content: space-between;
+				flex-flow: row wrap;
+			}
+
+			form.todoForm .formGroup input[type="text"] {
+				width: 80%;
+				padding: 10px 15px;
+				background-color: antiquewhite;
+				border: 0;
+				border-radius: 0;
+			}
+
+			form.todoForm .formGroup input[type="text"]:focus-visible {
+				outline: none;
+			}
+
+			form.todoForm .formGroup button[type="submit"] {
+				width: 10%;
+				height: 10%;
+				background-color: black;
+				color: white;
+				font-size: 24px;
+				border-radius: 50%;
+				border: 0;
+				padding: 5px;
+				display: block;
+			}
+
+			.todoLists {}
+
+			ul.listItems {
+				text-align: left;
+				list-style: none;
+				padding-left: 15px;
+			}
+
+			ul.listItems li {
+				display: flex;
+				flex-flow: row-reverse;
+				justify-content: space-between;
+			}
+
+			ul.listItems li.done {
+				text-decoration: line-through;
+			}
+
+			ul.listItems li.done>span.remove {
+				text-decoration: none;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<div class="todoListArea">
+			<h2>To Do List</h2>
+			<form method="post" class="todoForm">
+				<div class="formGroup">
+					<input type="text" name="name" id="name" placeholder="What do you want to do?">
+					<button type="submit">+</button>
+				</div>
+			</form>
+			<div class="todoLists">
+				<ul class="listItems"></ul>
+			</div>
+		</div>
+		<script src="./index.js"></script>
+	</body>
+
+</html>
